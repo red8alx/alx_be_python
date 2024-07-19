@@ -21,7 +21,9 @@ def main():
             shopping_list.remove(item)
         elif choice == '3':
             # Display the shopping list
-            print(f"The  items in the Shopping List are: {shopping_list}")
+            #print(f"The  items in the Shopping List are: {shopping_list}")
+            for item in shopping_list:
+                print(item)
         elif choice == '4':
             print("Goodbye!")
             break
