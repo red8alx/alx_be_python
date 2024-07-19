@@ -13,7 +13,7 @@ def perform_operation(num1, num2, operation):
             if num2 == 0:
                 errorMsg = "Cannot divide by zero"
                 return errorMsg
-            else:
+            elif num2 != 0:
                 result = num1 / num2
                 return result
         case _:
