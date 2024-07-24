@@ -11,34 +11,32 @@ class Book:
         return self.__is_checked_out
 class Library:
     __books = []
+    def __init__(self):
+        pass
+
+    def add_book(self, my_book):
+        self.__books.append(my_book)
     
-    @classmethod
-    def add_book(cls, my_book):
-        cls.__books.append(my_book)
-    
-    @classmethod
-    def check_out_book(cls, title):
+    def check_out_book(self, title):
         i = 0
-        while i < len(cls.__books):
-            if cls.__books[i].title == title:
-                cls.__books[i].check_out()
+        while i < len(self.__books):
+            if self.__books[i].title == title:
+                self.__books[i].check_out()
                 break
             #This function doesn't do anything if the book title passed doesn't exist in the list.
             i += 1
         
-    @classmethod
-    def return_book(cls, title):
+    def return_book(self, title):
         i = 0
-        while i < len(cls.__books):
-            if cls.__books[i].title == title:
-                cls.__books[i].return_book()
+        while i < len(self.__books):
+            if self.__books[i].title == title:
+                self.__books[i].return_book()
                 break
             #This function doesn't do anything if the book title passed doesn't exist in the list. 
             i += 1
 
-    @classmethod
-    def list_available_books(cls):
-        for i in cls.__books:
+    def list_available_books(self):
+        for i in self.__books:
             if i.check_status():
                 pass
             else:
