@@ -10,9 +10,9 @@ class Book:
     def check_status(self):
         return self.__is_checked_out
 class Library:
-    __books = []
+    
     def __init__(self):
-        pass
+        self.__books = []
 
     def add_book(self, my_book):
         self.__books.append(my_book)
