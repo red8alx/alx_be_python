@@ -4,6 +4,7 @@ class Book:
         self.author = author
     def __str__(self):
         return f"{self.__class__.__name__}: {self.title} by {self.author}"
+        # 'self.__class__.__name__' is used to get the class name of the instance.
 class EBook(Book):
     def __init__(self, title, author, file_size):
         super().__init__(title, author)
